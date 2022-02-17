@@ -18,7 +18,7 @@
 Free Time
 
 ## 2. Imágenes y vídeos:
-![Disfruta como un niño ](./img/niñosCorriendo.jpg)
+![Disfruta como un niño ](./img/niños_jugando.jpg)
 
 <a href='https://www.freepik.es/fotos/personas'>Foto de Personas creado por senivpetro - www.freepik.es</a>
 
