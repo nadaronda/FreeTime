@@ -20,8 +20,6 @@ Free Time
 ## 2. Imágenes y vídeos:
 ![Disfruta como un niño ](./img/niños_jugando.jpg)
 
-<a href='https://www.freepik.es/fotos/personas'>Foto de Personas creado por senivpetro - www.freepik.es</a>
-
 ## 3. Motivación del proyecto:
 La Idea de Free Time lleva bastante tiempo rondandome la cabeza, se trata de una aplicación que te da ideas de que poder realizar en tu tiempo libre, busco algo sencillo, en el que el usuario de un toque propio de sus gustos, sus hobbies y lo que le gusta. Me gustaria poder meter también actividades orientadas a tematicas como por ejemplo: navidad, 4 estaciones, San Valentín, festivos etc... y Finalmente añadir una lista de deseo anual, donde poder añadir una escalera en la que el usuario debera añadir pequeños objetivos para alcanzar el objetivo mayor, como por ejemplo: irse de viaje, plantearse que es lo que necesita para ello, y añadirlo en la escalerita, y cuando valla cumpliendo los pequeños objetivos subir un escalon, ejemplo si necesito un pasporte, todos sabemos que no se consigue de un día para otro, por lo que necesitaria añadirlo a un escalon y una vez lo consiga tendría que ver que objetivo se plantea para el siguiente escalo, y asi hasta llegar al objetivo final.
 
@@ -54,11 +52,12 @@ Execute the project:
 * [Visual Studio Code](https://code.visualstudio.com/Download)
   
 ## 8. Listado de paquetes y dependencias:
+
 * Node package manager: [npm](https://www.npmjs.com/)
 * To run the HTML: [parcel](https://www.npmjs.com/package/parcel ), [más información](https://parceljs.org/languages/javascript/#classic-scripts)
 
 *  Lenguajes de programación: [typescript](https://www.npmjs.com/package/typescript)
-*  Otros paquetes de Node: [rimraf](https://www.npmjs.com/package/rimraf), [ts-node-dev](https://www.npmjs.com/package/ts-node-dev)
+*  Otros paquetes de Node: [rimraf](https://www.npmjs.com/package/rimraf), [ts-node-dev](https://www.npmjs.com/package/ts-node-dev), [Lerna](https://www.npmjs.com/package/lerna)
 * Css 
 
 ## 9. Agradecimientos y otras consideraciones:

@@ -1,14 +1,15 @@
-import mongoose, { Document, Schema } from 'mongoose';
+import mongoose, { Document, Schema } from 'mongoose'
 
 export interface ipasosIntermedios extends Document {
-    name: String,
+    escalon: String,
     description: String,
-   
 }
 
 const schema = new Schema({
-  name: { type: String, require: true },
-  description: { type: String, require: true },
-});
+  escalon: { type: String, require: true },
+  description: { type: String, require: true }
+}, {
+  timestamps: true
+})
 
-export const escalon = mongoose.model<ipasosIntermedios>('Objetivo', schema);
+export const Escalon = mongoose.model<ipasosIntermedios>('Objetivo', schema)

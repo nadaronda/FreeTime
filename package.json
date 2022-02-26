@@ -1,0 +1,28 @@
+{
+  "name": "free-time",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nadaronda/FreeTime.git",
+  "author": "<you@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lerna": "^4.0.0"
+  },
+  "private":true,
+  "workspaces":[
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "lerna run dev --stream"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-react": "^7.29.2"
+  }
+}

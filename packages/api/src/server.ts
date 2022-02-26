@@ -1,12 +1,12 @@
-import fastify from "fastify";
-import { main_app } from "./app";
-import {PORT} from "./config";
+import fastify from 'fastify'
+import { mainApp } from './app'
+import { PORT } from './config'
 
-const server =fastify({
-    logger: {
-        prettyPrint: true,
-    },
-    disableRequestLogging:true,
-});
-server.register(main_app);
-server.listen(PORT, "0.0.0.0");
+const server = fastify({
+  logger: {
+    prettyPrint: true
+  },
+  disableRequestLogging: true
+})
+server.register(mainApp)
+server.listen(PORT)// de aquí retito , "0.0.0,0"

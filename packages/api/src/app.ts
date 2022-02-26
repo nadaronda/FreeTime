@@ -1,7 +1,7 @@
-import { FastifyPluginAsync } from "fastify"; 
-import { main_router } from "./routers/main_router";
-
-export const main_app: FastifyPluginAsync = async(app)=>{
-    app.register(main_router);
+import { FastifyPluginAsync } from 'fastify'
+import { mainRouter } from './routers/mainRouter'
+// cors
+export const mainApp: FastifyPluginAsync = async (app) => {
+  app.register(mainRouter)
 }
-console.log("hola funcionoo ");
+console.log('hola funcionoo ')
