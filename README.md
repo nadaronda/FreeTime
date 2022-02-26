@@ -4,6 +4,7 @@
 - [Indice:](#indice)
   - [1. Título de la aplicación:](#1-título-de-la-aplicación)
   - [2. Imágenes y vídeos:](#2-imágenes-y-vídeos)
+      - [Querer es poder](#querer-es-poder)
   - [3. Motivación del proyecto:](#3-motivación-del-proyecto)
   - [4. Acceso directo al juego:](#4-acceso-directo-al-juego)
   - [5. Tabla de contenidos o índice:](#5-tabla-de-contenidos-o-índice)
@@ -15,13 +16,16 @@
 
 
 ## 1. Título de la aplicación:
-Free Time
+Free Time & 
+The magic staircase
 
 ## 2. Imágenes y vídeos:
-![Disfruta como un niño ](./img/niños_jugando.jpg)
+#### Querer es poder
+![Escalera mágica](./img/escalera.jpg)
 
 ## 3. Motivación del proyecto:
-La Idea de Free Time lleva bastante tiempo rondandome la cabeza, se trata de una aplicación que te da ideas de que poder realizar en tu tiempo libre, busco algo sencillo, en el que el usuario de un toque propio de sus gustos, sus hobbies y lo que le gusta. Me gustaria poder meter también actividades orientadas a tematicas como por ejemplo: navidad, 4 estaciones, San Valentín, festivos etc... y Finalmente añadir una lista de deseo anual, donde poder añadir una escalera en la que el usuario debera añadir pequeños objetivos para alcanzar el objetivo mayor, como por ejemplo: irse de viaje, plantearse que es lo que necesita para ello, y añadirlo en la escalerita, y cuando valla cumpliendo los pequeños objetivos subir un escalon, ejemplo si necesito un pasporte, todos sabemos que no se consigue de un día para otro, por lo que necesitaria añadirlo a un escalon y una vez lo consiga tendría que ver que objetivo se plantea para el siguiente escalo, y asi hasta llegar al objetivo final.
+La Idea de Free Time lleva bastante tiempo rondandome la cabeza, se trata de una aplicación que te da ideas de que poder realizar en tu tiempo libre, busco algo sencillo, en el que el usuario de un toque propio de sus gustos, sus hobbies y lo que le gusta. Me gustaria poder meter también actividades orientadas a tematicas como por ejemplo: navidad, 4 estaciones, San Valentín, festivos etc... y 
+Finalmente añadir la escalera magica, donde poder añadir una escalera en la que el usuario debera añadir pequeños objetivos para alcanzar el objetivo mayor, como por ejemplo: irse de viaje, plantearse que es lo que necesita para ello, y añadirlo en la escalerita, y cuando valla cumpliendo los pequeños objetivos subir un escalon, ejemplo si necesito un pasporte, todos sabemos que no se consigue de un día para otro, por lo que necesitaria añadirlo a un escalon y una vez lo consiga tendría que ver que objetivo se plantea para el siguiente escalo, y asi hasta llegar al objetivo final.
 
 
 
