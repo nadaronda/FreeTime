@@ -12,4 +12,4 @@ const schema = new Schema({
   timestamps: true
 })
 
-export const Escalon = mongoose.model<ipasosIntermedios>('Objetivo', schema)
+export const Escalon = mongoose.model<ipasosIntermedios>('escalon', schema)

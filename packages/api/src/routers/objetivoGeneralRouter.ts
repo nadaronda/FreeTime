@@ -8,21 +8,23 @@ type Myrequest = FastifyRequest<{
 }>
 export const objetivoGeneralRouter: FastifyPluginAsync = async (app) => {
   // Get all objetives
-  app.get('/', async () => {
+  app.get('/objetivo', async () => {
+    console.log('aqui')
     const objetivos = await ObjetivoGeneral.find().lean()
     return objetivos
   })
   // Create a new objetivo
-  app.post('/', async (request: Myrequest, reply: FastifyReply) => {
+  app.post('/objetivo', async (request: Myrequest, reply: FastifyReply) => {
     const { objetivo, descripcion } = request.body
     const oobjetivo = new ObjetivoGeneral({ objetivo, descripcion })
     await oobjetivo.save()
     return oobjetivo
   })
   // borrar objetivo
-  app.get('/:id/delete', async (request: Myrequest, reply: FastifyReply) => {
+  app.delete('/objetivo/:id', async (request: Myrequest, reply: FastifyReply) => {
     const { id } = request.params
     await ObjetivoGeneral.findByIdAndDelete(id)
     return { status: 'delete' }
   })
 }
+// buscar prefijo en fastify
