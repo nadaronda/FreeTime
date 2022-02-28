@@ -1,7 +1,7 @@
 import { FastifyPluginAsync, FastifyRequest, FastifyReply } from 'fastify'
 import { Escalon } from '../models/pasoIntermedio.model'
 type Myrequest = FastifyRequest<{
-    Body: {escalon: string, descripcion: string, img: string};
+    Body: {escalon: string, descripcion: string, timeImport: Number};
     Params: {id: string}
 }>
 export const escalonGeneralRouter: FastifyPluginAsync = async (app) => {
@@ -12,10 +12,10 @@ export const escalonGeneralRouter: FastifyPluginAsync = async (app) => {
   })
   // Create a new escalon
   app.post('/escalon', async (request: Myrequest, reply: FastifyReply) => {
-    const { escalon, descripcion } = request.body
-    const paso = new Escalon({ escalon, descripcion })
-    await paso.save()
-    return paso
+    const { escalon, descripcion, timeImport } = request.body
+    const newPaso = new Escalon({ escalon, descripcion, timeImport })
+    await newPaso.save()
+    return newPaso
   })
   // borrar escalon
   app.delete('/escalon/:id', async (request: Myrequest, reply: FastifyReply) => {
