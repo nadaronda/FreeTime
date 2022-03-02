@@ -15,13 +15,6 @@
   - [8. Entornos de ejecución:](#8-entornos-de-ejecución)
   - [9. Listado de paquetes y dependencias:](#9-listado-de-paquetes-y-dependencias)
   - [10. Agradecimientos y otras consideraciones:](#10-agradecimientos-y-otras-consideraciones)
-](#5-acceso-directo-a-la-aplicación)
-  - [6.Tabla de contenidos o índice:](#6-tabla-de-contenidos-o-índice)
-  - [7.Manual de instalación y deployment: ](#7-manual-de-instalación-y-deployment)
-  - [8.Entornos de ejecución: ](#8-entornos-de-ejecución)
-  - [9.Listado de paquetes y dependencias:](#9-listado-de-paquetes-y-dependencias)
-  - [10.Agradecimientos y otras consideraciones:](#10-agradecimientos-y-otras-consideraciones)
- 
 
 
 ## 1. Título de la aplicación:
