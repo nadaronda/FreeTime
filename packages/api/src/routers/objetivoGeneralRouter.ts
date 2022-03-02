@@ -3,7 +3,7 @@ import { FastifyPluginAsync, FastifyRequest, FastifyReply } from 'fastify'
 import { ObjetivoGeneral } from '../models/objetivoGeneral.model'
 
 type Myrequest = FastifyRequest<{
-    Body: {userId: string, objetivo: string, descripcion: string, limitTime: Number, img: string};
+    Body: {user_Id: string, objetivo: string, descripcion: string, limitTime: Number, img: string};
     Params: {id: string}
 }>
 export const objetivoGeneralRouter: FastifyPluginAsync = async (app) => {
@@ -15,8 +15,8 @@ export const objetivoGeneralRouter: FastifyPluginAsync = async (app) => {
   })
   // Create a new objetivo
   app.post('/', async (request: Myrequest, reply: FastifyReply) => {
-    const { userId, objetivo, descripcion, limitTime } = request.body
-    const newObjetivo = new ObjetivoGeneral({ userId, objetivo, descripcion, limitTime })
+    const { user_Id, objetivo, descripcion, limitTime } = request.body
+    const newObjetivo = new ObjetivoGeneral({ user_Id, objetivo, descripcion, limitTime })
     await newObjetivo.save()
     return newObjetivo
   })
