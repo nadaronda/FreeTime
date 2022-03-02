@@ -8,19 +8,19 @@ type Myrequest = FastifyRequest<{
 }>
 export const categoriaRouter: FastifyPluginAsync = async (app) => {
   // Get all objetives
-  app.get('/categoria', async () => {
+  app.get('/', async () => {
     const categorias = await Categoria.find().lean()
     return categorias
   })
   // Create a new objetivo
-  app.post('/categoria', async (request: Myrequest, reply: FastifyReply) => {
+  app.post('/', async (request: Myrequest, reply: FastifyReply) => {
     const { categoria } = request.body
     const newCategoria = new Categoria({ categoria })
     await newCategoria.save()
     return newCategoria
   })
   // borrar objetivo
-  app.delete('/categoria/:id', async (request: Myrequest, reply: FastifyReply) => {
+  app.delete('/:id', async (request: Myrequest, reply: FastifyReply) => {
     const { id } = request.params
     await Categoria.findByIdAndDelete(id)
     return { status: 'delete' }

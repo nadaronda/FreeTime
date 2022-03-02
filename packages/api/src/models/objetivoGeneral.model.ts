@@ -1,6 +1,8 @@
 import mongoose, { Document, Schema } from 'mongoose'
+import { Escalon } from './pasoIntermedio.model'
 
-export interface iobjetivoGeneral extends Document {
+export interface iObjetivoGeneral extends Document {
+    userId: String,
     objetivo: String,
     descripcion: String,
     limitTime: Number, // limit time es un dato donde te das un tiempo determinado para terminar el objetivo
@@ -8,7 +10,8 @@ export interface iobjetivoGeneral extends Document {
 }
 
 const schema = new Schema({
-  objetive: { type: String, require: true },
+  userId: { type: String, require: true },
+  objetivo: { type: String, require: true },
   descripcion: { type: String, require: false },
   limitTime: { type: Number, require: true },
   img: String
@@ -17,5 +20,10 @@ const schema = new Schema({
   timestamps: true // esto hace que cada vez que s guarde data la informacion tenga fecha y hora
 })
 
-export const ObjetivoGeneral = mongoose.model<iobjetivoGeneral>('Objetivo', schema)
+export const getEscalon = async (idObjetivoGeneral: string) => {
+  const escalones = await Escalon.find({ objetivo: idObjetivoGeneral }).lean()
+  return escalones
+}
+
+export const ObjetivoGeneral = mongoose.model<iObjetivoGeneral>('Objetivo', schema)
 // falta user ID, esto es para relacionar los datos a un unico usuario
