@@ -16,7 +16,7 @@ const Menu = () => (
       <Link href="/categoria">Categorias</Link>
     </li>
     <li>
-      <Link href="/">Log in</Link>
+      <Link href="/logIn">Log in</Link>
     </li>
   </ul>
 )

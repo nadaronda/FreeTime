@@ -1,4 +1,5 @@
 import React from 'react'
+import EscalonForm from '../components/form/escalonForm'
 
 const EscalonPage = () => (
   <div>
@@ -10,6 +11,7 @@ const EscalonPage = () => (
     Para que esta herramienta te sea más util y más sencilla,
     el micro objetivo, escalón debe ser lo más simple posible.
     </p>
+    <EscalonForm/>
   </div>
 )
 

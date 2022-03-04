@@ -20,7 +20,14 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "new-cap": ["error", { "newIsCap": true }],
+        "no-use-before-define": "off",
+        "no-undef": "off",
+        "new-cap": [
+            "error",
+            {
+                "newIsCap": true
+            }
+        ],
         "camelcase": "off"
     }
 }

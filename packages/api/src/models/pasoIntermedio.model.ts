@@ -5,6 +5,7 @@ export interface ipasosIntermedios extends Document {
     descripcion: String,
     timeImport: Number, // Add fecha importante "presentación e papeles" o fecha límite
     objetivo: iObjetivoGeneral['_id'];
+    // me falta añadir lo de la categoria
     // categori_id
 }
 

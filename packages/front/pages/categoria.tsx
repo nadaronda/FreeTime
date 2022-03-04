@@ -1,4 +1,5 @@
 import React from 'react'
+import CategoriaForm from '../components/form/categoriaForm'
 
 const CategoriaPage = () => (
   <div>
@@ -14,6 +15,7 @@ const CategoriaPage = () => (
         aquellos escalones que la contengan. Para poder saber con facilidad aquellos
         objetivos que comparten ciertas caracteristicas.
     </p>
+    <CategoriaForm/>
   </div>
 )
 
