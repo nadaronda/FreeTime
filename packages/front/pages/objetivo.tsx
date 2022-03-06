@@ -1,5 +1,5 @@
 import React from 'react'
-import ObjetivoForm from '../components/form/objetivoForm'
+import NewObjetivo from '../components/form/objetivoForm'
 
 const ObjetivoPage = () => (
   <div>
@@ -9,7 +9,8 @@ const ObjetivoPage = () => (
     <p>
     En esta pantalla observaras tus objetivos, podras añadir objetivos y eliminarlos.
     </p>
-    <ObjetivoForm />
+
+    <NewObjetivo/>
   </div>
 )
 

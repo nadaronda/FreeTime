@@ -1,6 +1,8 @@
+
 import { conectDB } from '../lib/db'
 import { ObjetivoGeneral } from '../models/objetivoGeneral.model'
-import { Escalon } from '../models/pasoIntermedio.model';
+import { Escalon } from '../models/pasoIntermedio.model'
+import { Categoria } from '../models/categoria.model'
 
 (async () => {
   const { close } = await conectDB()
@@ -14,12 +16,17 @@ import { Escalon } from '../models/pasoIntermedio.model';
   } catch (error) {
     console.log('There are no pasos intermedios to drop from db')
   }
-
-  /* const recipe = [{ apples: '1kg' }, { flour: '2cups' }, { butter: '3spoons' },
-{ eggs: '6uds' }, { milk: '1l' }];
-await Promise.all(recipe.map(async (ing) => {
-await Ingredient.create({ name: Object.keys(ing)[0], quantity: Object.values(ing)[0] }).then((e) => console.log(`🍊Create ingredient ${e.name}`));
-})); */
+  try {
+    await Categoria.collection.drop()
+  } catch (error) {
+    console.log('There are no pasos intermedios to drop from db')
+  }
+  /*
+  const categ = [{ name: 'economico' }, { name: 'burocratico' }, { name: 'familiar' },
+    { name: 'sentimental' }, { name: 'otros' }]
+  await Promise.all(categ.map(async (name) => {
+    await Categoria.create({ name: Object.keys(name)[0] }).then((e) => console.log(`🍊Create categoria ${e.name}`))
+  })) */ // no me funciona
 
   await close()
 })()

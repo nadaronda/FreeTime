@@ -3,7 +3,7 @@ import { FastifyPluginAsync, FastifyRequest, FastifyReply } from 'fastify'
 import { Categoria } from '../models/categoria.model'
 
 type Myrequest = FastifyRequest<{
-    Body: {categoria: String};
+    Body: {name: String};
     Params: {id: string}
 }>
 export const categoriaRouter: FastifyPluginAsync = async (app) => {
@@ -14,8 +14,8 @@ export const categoriaRouter: FastifyPluginAsync = async (app) => {
   })
   // Create a new objetivo
   app.post('/', async (request: Myrequest, reply: FastifyReply) => {
-    const { categoria } = request.body
-    const newCategoria = new Categoria({ categoria })
+    const { name } = request.body
+    const newCategoria = new Categoria({ name })
     await newCategoria.save()
     return newCategoria
   })

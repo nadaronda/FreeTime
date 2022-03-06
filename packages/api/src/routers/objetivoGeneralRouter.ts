@@ -3,13 +3,13 @@ import { FastifyPluginAsync, FastifyRequest, FastifyReply } from 'fastify'
 import { ObjetivoGeneral } from '../models/objetivoGeneral.model'
 
 type Myrequest = FastifyRequest<{
-    Body: {user_Id: string, objetivo: string, descripcion: string, limitTime: Number, img: string};
+    Body: {user_Id: string, objetivo: string, descripcion: string, limitTime: Date, img: string};
     Params: {id: string}
 }>
 export const objetivoGeneralRouter: FastifyPluginAsync = async (app) => {
   // Get all objetives
   app.get('/', async () => {
-    console.log('aqui')
+    console.log('hola desde la api')
     const objetivos = await ObjetivoGeneral.find().lean()
     return objetivos
   })
@@ -27,4 +27,4 @@ export const objetivoGeneralRouter: FastifyPluginAsync = async (app) => {
     return { status: 'delete' }
   })
 }
-// buscar prefijo en fastify
+// mirar img

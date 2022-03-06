@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
+import { addObjetivo } from '../../lib/Api'
 
 const errorColor = '#ff4d4f'
 
@@ -67,13 +68,18 @@ const ErrorMessageText = styled.p`
   margin: 4px 8px;
   color: #ff4d4f;
 `
-const ObjetivoForm = () => {
+const NewObjetivo = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors }
   } = useForm()
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = handleSubmit(async (data) => {
+    console.log(data)
+    const objetivo = await addObjetivo(data)
+    reset()
+  })
   console.log(errors)
 
   return (
@@ -87,7 +93,7 @@ const ObjetivoForm = () => {
             <CustomInput
               type="text"
               placeholder="Nombre del objetivo..."
-              {...register('Objetivo', { required: true, maxLength: 20 })}
+              {...register('objetivo', { required: true })}
             />
           </Column>
 
@@ -99,16 +105,26 @@ const ObjetivoForm = () => {
               {...register('descripcion', { maxLength: 50 })}
             />
           </Column>
+          <Column>
+            <label htmlFor = "limitTime">Fecha límite:</label>
+            <CustomInput
+              type="date"
+              placeholder="limitTime"
+              {...register('limitTime', { valueAsDate: true, required: true })}
+            />
+          </Column>
         </Row>
 
         <Row>
           <Column>
-            <CustomBtn type="submit">Enviar</CustomBtn>
+            <CustomBtn onClick={onSubmit} type="submit">Enviar</CustomBtn>
           </Column>
         </Row>
       </FlexForm>
+
     </div>
+
   )
 }
 
-export default ObjetivoForm
+export default NewObjetivo
