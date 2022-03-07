@@ -3,7 +3,7 @@ import { FastifyPluginAsync, FastifyRequest, FastifyReply } from 'fastify'
 import { ObjetivoGeneral } from '../models/objetivoGeneral.model'
 
 type Myrequest = FastifyRequest<{
-    Body: {user_Id: string, objetivo: string, descripcion: string, limitTime: Date, img: string};
+    Body: {user_Id: string, objetivo: string, descripcion: string, limitTime: Date, /* img: string */};
     Params: {id: string}
 }>
 export const objetivoGeneralRouter: FastifyPluginAsync = async (app) => {

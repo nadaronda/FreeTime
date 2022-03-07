@@ -8,6 +8,7 @@ const Menu = () => (
     </li>
     <li>
       <Link href="/objetivo">Objetivos</Link>
+      <ol><Link href="/crearObjetivo">Crear Objetivo</Link></ol>
     </li>
     <li>
       <Link href="/escalon">Escalon</Link>

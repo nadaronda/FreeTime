@@ -1,5 +1,6 @@
 
 import { conectDB } from '../lib/db'
+import mongoose from 'mongoose'
 import { ObjetivoGeneral } from '../models/objetivoGeneral.model'
 import { Escalon } from '../models/pasoIntermedio.model'
 import { Categoria } from '../models/categoria.model'
@@ -27,6 +28,7 @@ import { Categoria } from '../models/categoria.model'
   await Promise.all(categ.map(async (name) => {
     await Categoria.create({ name: Object.keys(name)[0] }).then((e) => console.log(`🍊Create categoria ${e.name}`))
   })) */ // no me funciona
-
-  await close()
+  await mongoose.disconnect().then(() => {
+    console.log('bye')
+  })
 })()

@@ -78,13 +78,14 @@ const NewObjetivo = () => {
   const onSubmit = handleSubmit(async (data) => {
     console.log(data)
     const objetivo = await addObjetivo(data)
+    console.log(objetivo)
+
     reset()
   })
   console.log(errors)
 
   return (
     <div>
-      <h3>Formulario Objetivos</h3>
 
       <FlexForm onSubmit={handleSubmit(onSubmit)}>
         <Row>

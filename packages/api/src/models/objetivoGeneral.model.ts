@@ -7,15 +7,15 @@ export interface iObjetivoGeneral extends Document {
     objetivo: String,
     descripcion: String,
     limitTime: Date, // cambiarlo por day limit time es un dato donde te das un tiempo determinado para terminar el objetivo
-    img: String,
+    // img: String,
 }
 
 const schema = new Schema({
   user_Id: { type: String, require: true },
   objetivo: { type: String, require: true },
   descripcion: { type: String, require: true },
-  limitTime: { type: Date, require: true },
-  img: String
+  limitTime: { type: Date, require: true }
+  // img: String
   // true es que si o si se debe solicitar ese campo, false no es necesario
 }, {
   timestamps: true // esto hace que cada vez que s guarde data la informacion tenga fecha y hora
