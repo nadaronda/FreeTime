@@ -1,7 +1,7 @@
 import React from 'react'
-import EscalonForm from '../components/form/escalonForm'
+import NewEscalon from '../components/form/escalonForm'
 
-const EscalonPage = () => (
+const CreaEscalon = () => (
   <div>
     <h2>La escalera mágica</h2>
     <p>Escalones</p>
@@ -11,8 +11,9 @@ const EscalonPage = () => (
     Para que esta herramienta te sea más util y más sencilla,
     el micro objetivo, escalón debe ser lo más simple posible.
     </p>
-    <EscalonForm/>
+    <NewEscalon/>
+  {/* Aqui intentar que aparezcan los escalones de interes */}
   </div>
 )
 
-export default EscalonPage
+export default CreaEscalon

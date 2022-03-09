@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
-
+import { addEscalon } from '../../lib/Api'
 const errorColor = '#ff4d4f'
 
 const FlexForm = styled.form`
@@ -67,18 +67,25 @@ const ErrorMessageText = styled.p`
   margin: 4px 8px;
   color: #ff4d4f;
 `
-const EscalonForm = () => {
+const NewEscalon = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors }
   } = useForm()
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = handleSubmit(async (data) => {
+    console.log(data)
+    const objetivo = await addEscalon(data)
+    console.log('su escalon se ha creado adecuadamente', objetivo)
+
+    reset()
+  })
   console.log(errors)
 
   return (
     <div>
-      <h3>Formulario Escalones/microbjetivos</h3>
+      <h4>Formulario Escalones/microbjetivos</h4>
 
       <FlexForm onSubmit={handleSubmit(onSubmit)}>
         <Row>
@@ -108,6 +115,14 @@ const EscalonForm = () => {
               <option value="Otros"> Otros</option>
             </select>
           </Column>
+          <Column>
+            <label htmlFor = "timeImport">Fecha límite:</label>
+            <CustomInput
+              type="date"
+              placeholder="timeImport"
+              {...register('timeImport', { valueAsDate: true, required: true })}
+            />
+          </Column>
         </Row>
 
         <Row>
@@ -120,4 +135,4 @@ const EscalonForm = () => {
   )
 }
 
-export default EscalonForm
+export default NewEscalon

@@ -2,14 +2,15 @@ import React from 'react'
 import Head from 'next/head'
 import Menu from '../menu'
 import Footer from '../footer'
+import { useUser } from '@auth0/nextjs-auth0'
 // cuando realice el login auth0 importar aqui y todo lo que conlleva la modificacion del archivo.
 
 // recibe props children (palabra reservada) exclusivamente que es un componente de react, FC signica function component.
 // usamos head para usar las etiquetas de next de head y aqui podemos añadir boostrap.
 
-const PrimaryLayout: React.FC<{ children: React.ReactNode }> = ({
-  children
-}) => {
+const PrimaryLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { user } = useUser()
+  console.log(user)
   return (
     <>
       <div>
@@ -35,7 +36,34 @@ const PrimaryLayout: React.FC<{ children: React.ReactNode }> = ({
       </div>
       <div className="container">
         <Menu />
-        <main>{children}</main>
+        <main>
+        <div style={{ padding: '20px 0', textAlign: 'center' }}>
+            {!user && (
+            <a
+              style={{ margin: '5px' }}
+              href="/api/auth/login"
+              className="btn btn-primary"
+            >
+              Login
+            </a>
+            )}
+            {user && (
+            <>
+              <img alt="" src={user.picture} width="38" className="rounded" />
+              <a
+                style={{ margin: '5px' }}
+                href="/api/auth/logout"
+                className="btn btn-primary"
+              >
+                Logout
+                {' '}
+                {user.email}
+              </a>
+            </>
+            )}
+          </div>
+          {children}
+        </main>
         <Footer />
       </div>
     </>

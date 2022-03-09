@@ -78,7 +78,7 @@ const NewObjetivo = () => {
   const onSubmit = handleSubmit(async (data) => {
     console.log(data)
     const objetivo = await addObjetivo(data)
-    console.log(objetivo)
+    console.log('su objetivo se ha creado adecuadamente', objetivo)
 
     reset()
   })
@@ -103,7 +103,7 @@ const NewObjetivo = () => {
             <CustomInput
               type="text"
               placeholder="Describe su objetivo..."
-              {...register('descripcion', { maxLength: 50 })}
+              {...register('descripcion', { maxLength: 150 })}
             />
           </Column>
           <Column>
@@ -118,7 +118,7 @@ const NewObjetivo = () => {
 
         <Row>
           <Column>
-            <CustomBtn onClick={onSubmit} type="submit">Enviar</CustomBtn>
+            <CustomBtn onClick={onSubmit} type="submit">Añadir</CustomBtn>
           </Column>
         </Row>
       </FlexForm>
