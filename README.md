@@ -31,22 +31,17 @@ Finalmente añadir la escalera magica, donde poder añadir una escalera en la qu
 
 ## 4. Estructura:
  ### 4.1.  Repositorio:
- El proyecto esta basado en un monorepositorio, esta es su estructura que sigue:
+ El proyecto esta basado en un monorepositorio, esta es la estructura que sigue:
 ```
 final-project
     │
     |   packages/
     |    ├── api/
-    │    |    ├── src/
-    │    |    ├── routers/
-    │    |    ├── scripts/
-    │    |    ├── app.ts
-    │    |    ├── config.ts
-    │    |    ├── server.ts
+    │    |    ├── ...
     │    |    └── package.json
     |    |
     |    └── front/
-    |         ├── pages/
+    |         ├── ...
     |         └── package.json
     │
     ├── .eslintrc.json
@@ -57,8 +52,37 @@ final-project
     └── tsconfig.json
 ```
  ### 4.2.  API:
-* Modelos:
-* CRUDs:
+* Modelo de Objetivo general:
+  
+  ```tsx
+  const schema = new Schema({
+  user_Id: { type: String, require: true },
+  objetivo: { type: String, require: true },
+  descripcion: { type: String, require: true },
+  limitTime: { type: Date, require: true }
+  }, {
+  timestamps: true})
+  ```
+* Modelo de escalon, paso intermedio:
+  ```tsx
+  const schema = new Schema({
+  escalon: { type: String, require: true },
+  descripcion: { type: String, require: true },
+  timeImport: { type: Date, require: true },
+  objetivo: { type: Schema.Types.ObjectId, ref: 'Objetivo' },
+  categoria: { type: Schema.Types.ObjectId, ref: 'Categoria' }
+  }, {
+  timestamps: true
+  })
+  ```
+* Modelo de categoria:
+  ```tsx
+  const schema = new Schema({
+  name: { type: String, require: true }
+  }, { // timestamps: true
+  })
+  ```
+  
 ## 5. Acceso directo a la aplicación:
 [Pincha aquí para poder acceder](https://github.com/nadaronda/FreeTime/)
 
@@ -69,17 +93,17 @@ final-project
 Clone the repository:
     git clone https://github.com/nadaronda/FreeTime.git
 
-Initiate npm:
-    npm init
+Initiate npm/yarn(dependerá del gestor de paquetes que utilices):
+    npm init / yarn init:
 
 Or use this instead:
-    npm init -y
+    npm init -y / yarn init -y
 
 Install dependencies:
-    npm install
+    npm install / yarn install
 
 Execute the project:
-    npm run dev
+    npm run dev / yarn run dev
 
 ``` 
 ## 8. Entornos de ejecución:
@@ -87,20 +111,23 @@ Execute the project:
   
 ## 9. Listado de paquetes y dependencias:
 ```
-| Front      | Api          | All           |
-| ---------- | -------------| --------------|
-| next       | auth0        |               |
-| parcel     | dotenv       | eslint        |
-| react      | fastify      | lerna         |
-| axios      | fastify-cors | typescript    |
-| react-dom  | ts-node      | yarn          |
-|            | mongoose     |               |
-|            | nodemon      |               |
-|            | pino         |               |
-|            | pino-pretty  |               |
-|            |              |               |
+| Front     | Api          | All        |
+| --------- | ------------ | ---------- |
+| next      | auth0        | yarn       |
+| parcel    | dotenv       | eslint     |
+| react     | fastify      | lerna      |
+| axios     | fastify-cors | typescript |
+| react-dom | ts-node      | ...        |
+| ...       | mongoose     |            |
+|           | nodemon      |            |
+|           | pino         |            |
+|           | pino-pretty  |            |
+|           | ...          |            |
 
 ```
 
 
 ## 10. Agradecimientos y otras consideraciones:
+Agradecer principalmente a mi pareja por aguantarme las horas y horas que le he dedicado al proyecto, la ayuda recibida de su parte en diversos ambitos, sin el no hubiese podido con todo, muchísimas gracias.
+También agradecer a Core code School por todo, a mi profesor Marcos.
+Y a todos mis compañeros por ayudarme siempre que han podido.

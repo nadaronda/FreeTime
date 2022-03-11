@@ -1,37 +1,35 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-
+import thunk from 'redux-thunk'
 const initState = {
-  match: [
-    {
-      _id: 0,
-      objetivoId: '',
-      escalontId: '',
-      categoriaId: ''
-    }
-  ]
+  objetivo: [{
+    _id: 0,
+    objetivo: '',
+    descripcion: '',
+    limitTime: ''
+  }]
 }
 
 function routReducer (state = initState, action) {
-  console.log(state)
-  console.log(action)
-  return state
+  switch (action.type) {
+    case 'ADDITEM':
+      return {
+        ...state,
+        ObjetivoGeneral: [...state.ObjetivoGeneral, action.objetivo]
+      }
+    case 'DELETEALL':
+      return {
+        ...state,
+        ObjetivoGeneral: []
+      }
+    default:
+      return state
+  }
 }
 
-export const store = createStore(routReducer, composeWithDevTools())
-
-// redux es una funcion que recibe accion y estado, y devuelve un nuevo estado
-// Que la store englobe todo.
-
-/**
- * This is a reducer - a function that takes a current state value and an
- * action object describing "what happened", and returns a new state value.
- * A reducer's function signature is: (state, action) => newState
- *
- * The Redux state should contain only plain JS objects, arrays, and primitives.
- * The root state value is usually an object. It's important that you should
- * not mutate the state object, but return a new object if the state changes.
- *
- * You can use any conditional logic you want in a reducer. In this example,
- * we use a switch statement, but it's not required.
- */
+// Create a Redux store holding the state of your app.
+// Its API is { subscribe, dispatch, getState }.
+export const store = createStore(
+  routReducer,
+  composeWithDevTools(applyMiddleware(thunk))
+)
