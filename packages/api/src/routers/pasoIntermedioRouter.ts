@@ -13,9 +13,9 @@ export const escalonGeneralRouter: FastifyPluginAsync = async (app) => {
   // Create a new escalon
   app.post('/', async (request: Myrequest, reply: FastifyReply) => {
     const { escalon, descripcion, timeImport } = request.body
-    const newPaso = new Escalon({ escalon, descripcion, timeImport })
-    await newPaso.save()
-    return newPaso
+    const newEscalon = new Escalon({ escalon, descripcion, timeImport })
+    await newEscalon.save()
+    return newEscalon
   })
   // borrar escalon
   app.delete('/:id', async (request: Myrequest, reply: FastifyReply) => {

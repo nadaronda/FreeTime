@@ -1,6 +1,5 @@
 import React from 'react'
 import NewObjetivo from '../components/form/nuevoObjetivo'
-import NewEscalon from '../components/form/escalonForm'
 const crearObjetivo = () => (
 
     <>
@@ -9,7 +8,6 @@ const crearObjetivo = () => (
       <p>Añade sus pequeños escalones para alcanzar
          su objetivo mayor
       </p>
-      < NewEscalon/>
     </>
 
 )

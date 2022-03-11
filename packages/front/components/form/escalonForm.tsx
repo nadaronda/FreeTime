@@ -90,11 +90,11 @@ const NewEscalon = () => {
       <FlexForm onSubmit={handleSubmit(onSubmit)}>
         <Row>
           <Column>
-            <label htmlFor = "Escalón">Escalón:</label>
+            <label htmlFor = "escalón">Escalón:</label>
             <CustomInput
               type="text"
               placeholder="Nombre del escalón..."
-              {...register('Escalon', { required: true })}
+              {...register('escalon', { required: true })}
             />
           </Column>
 
@@ -105,15 +105,6 @@ const NewEscalon = () => {
               placeholder="Descripción ..."
               {...register('descripcion', { required: true })}
             />
-          </Column>
-          <Column>
-          <label htmlFor = "Categoría">Categoría:</label>
-            <select {...register('Categoría', { required: true })}>
-              <option value="Burocratico">Burocratico</option>
-              <option value="Economico"> Economico</option>
-              <option value="Familiar"> Familiar</option>
-              <option value="Otros"> Otros</option>
-            </select>
           </Column>
           <Column>
             <label htmlFor = "timeImport">Fecha límite:</label>

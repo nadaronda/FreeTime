@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
+import { addCategoria } from '../../lib/Api'
 
 const errorColor = '#ff4d4f'
 
@@ -71,9 +72,16 @@ const CategoriaForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors }
   } = useForm()
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = handleSubmit(async (data) => {
+    console.log(data)
+    const categoria = await addCategoria(data)
+    console.log('su objetivo se ha creado adecuadamente', categoria)
+
+    reset()
+  })
   console.log(errors)
 
   return (
@@ -83,27 +91,18 @@ const CategoriaForm = () => {
       <FlexForm onSubmit={handleSubmit(onSubmit)}>
         <Row>
           <Column>
-            <label htmlFor = "Categoría">Categoría:</label>
+            <label htmlFor = "name">Categoria:</label>
             <CustomInput
               type="text"
               placeholder="Nombre de la categoría..."
-              {...register('Categoría', { required: true })}
+              {...register('name', { required: true })}
             />
-          </Column>
-          <Column>
-          <label htmlFor = "Categoría">Categoría:</label>
-            <select {...register('Categoría', { required: true })}>
-              <option value="Burocratico">Burocratico</option>
-              <option value="Economico"> Economico</option>
-              <option value="Familiar"> Familiar</option>
-              <option value="Otros"> Otros</option>
-            </select>
           </Column>
         </Row>
 
         <Row>
-          <Column>
-            <CustomBtn type="submit">Enviar</CustomBtn>
+        <Column>
+            <CustomBtn onClick={onSubmit} type="submit">Añadir</CustomBtn>
           </Column>
         </Row>
       </FlexForm>
