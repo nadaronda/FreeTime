@@ -20,12 +20,10 @@ const Menu = () => (
        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
 
-              <Link href="/">Home</Link>
               <Link href="/objetivo">Objetivos</Link>
               <Link href="/crearObjetivo">Crear Objetivos</Link>
               <Link href="/escalon">Escalon</Link>
               <Link href="/categoria">Categorias</Link>
-              <Link href="/logIn">logIn</Link>
          </div>
         </div>
     </div>

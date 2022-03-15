@@ -6,11 +6,7 @@ import { Provider } from 'react-redux'
 import { store } from '../lib/redux/store'
 // me traigo las props que trae por defecto la app next, todo bajo el marco de una funcion.
 // como componentes traremos component, pageprops y router.
-const MyApp = ({ Component, pageProps, router, initialUser, hello }) => {
-  console.log('router', router.asPath)
-  console.log('hola', hello)
-  console.log('component', Component)
-  console.log('pageProps', pageProps)
+const MyApp = ({ Component, pageProps, router, initialUser }) => {
   return (
   // engloba la app bajo redux
   <Provider store={store}>
@@ -56,14 +52,3 @@ const MyApp = ({ Component, pageProps, router, initialUser, hello }) => {
 }
 
 export default MyApp
-/* const MyApp = ({ Component, pageProps, router }) => (
-  <>
-    <header>
-      <Menu />
-    </header>
-    <main>
-      <Component {...pageProps} />
-    </main>
-  </>
-)
-export default MyApp */

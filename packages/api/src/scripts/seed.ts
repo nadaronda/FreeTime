@@ -1,6 +1,4 @@
-
 import { conectDB } from '../lib/db'
-import mongoose from 'mongoose'
 import { ObjetivoGeneral } from '../models/objetivoGeneral.model'
 import { Escalon } from '../models/pasoIntermedio.model'
 import { Categoria } from '../models/categoria.model'
@@ -22,13 +20,8 @@ import { Categoria } from '../models/categoria.model'
   } catch (error) {
     console.log('There are no pasos intermedios to drop from db')
   }
-  /*
-  const categ = [{ name: 'economico' }, { name: 'burocratico' }, { name: 'familiar' },
-    { name: 'sentimental' }, { name: 'otros' }]
-  await Promise.all(categ.map(async (name) => {
-    await Categoria.create({ name: Object.keys(name)[0] }).then((e) => console.log(`🍊Create categoria ${e.name}`))
-  })) */ // no me funciona
-  await mongoose.disconnect().then(() => {
-    console.log('bye')
-  })
+
+  // Aquí podría añadir categorias predefinidas
+
+  await close()
 })()

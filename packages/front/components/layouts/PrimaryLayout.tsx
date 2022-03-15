@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Menu from '../menu'
 import Footer from '../footer'
 import { useUser } from '@auth0/nextjs-auth0'
+import { Entrada } from '../entrada'
+import loginHandlerFactory from '@auth0/nextjs-auth0/dist/auth0-session/handlers/login'
 // cuando realice el login auth0 importar aqui y todo lo que conlleva la modificacion del archivo.
 
 // recibe props children (palabra reservada) exclusivamente que es un componente de react, FC signica function component.
@@ -22,6 +24,8 @@ const PrimaryLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
             crossOrigin="anonymous"
           ></link>
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"></link>
           <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
             integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
@@ -35,8 +39,9 @@ const PrimaryLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
         </Head>
       </div>
       <div className="container">
-        <Menu />
+
         <main>
+
         <div style={{ padding: '20px 0', textAlign: 'center' }}>
             {!user && (
             <a
@@ -46,6 +51,7 @@ const PrimaryLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             >
               Login
             </a>
+
             )}
             {user && (
             <>
@@ -58,12 +64,16 @@ const PrimaryLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                 Logout
                 {' '}
                 {user.email}
+
               </a>
+              <Menu />
+              {children}
             </>
             )}
           </div>
-          {children}
+
         </main>
+        {!user && (<Entrada/>)}
         <Footer />
       </div>
     </>

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
 import { addEscalon } from '../../lib/Api'
+import Añadir from '../botonMas'
 const errorColor = '#ff4d4f'
 
 const FlexForm = styled.form`
@@ -118,7 +119,8 @@ const NewEscalon = () => {
 
         <Row>
           <Column>
-            <CustomBtn type="submit">Enviar</CustomBtn>
+            <CustomBtn type="submit" >Enviar </CustomBtn>
+           {/* <Añadir type="submit"/> */}
           </Column>
         </Row>
       </FlexForm>

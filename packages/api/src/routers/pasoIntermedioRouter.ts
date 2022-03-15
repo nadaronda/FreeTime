@@ -1,7 +1,7 @@
 import { FastifyPluginAsync, FastifyRequest, FastifyReply } from 'fastify'
 import { Escalon } from '../models/pasoIntermedio.model'
 type Myrequest = FastifyRequest<{
-    Body: {escalon: string, descripcion: string, timeImport: Number};
+    Body: {escalon: string, descripcion: string, timeImport: Date};
     Params: {id: string}
 }>
 export const escalonGeneralRouter: FastifyPluginAsync = async (app) => {
