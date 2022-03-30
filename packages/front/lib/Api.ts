@@ -3,10 +3,11 @@ import axios from 'axios'
 const apiBaseURL = 'http://127.0.0.1:10'
 const api = axios.create({ baseURL: apiBaseURL })
 
-export const getObjetivo = async () => {
+export const getObjetivos = async () => {
   const res = await api.get('/objetivo')
   return res.data
 }
+
 // hacer ruta getObjetivo
 export const addObjetivo = async (data) => {
   console.log(`📝, la data del objetivo añadido es ${data}`)

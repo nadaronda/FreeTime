@@ -20,7 +20,7 @@ const Menu = () => (
        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
 
-              <Link href="/objetivo">Objetivos</Link>
+              <Link href="http://localhost:3000/api/auth/objetivos">Objetivos</Link>
               <Link href="/crearObjetivo">Crear Objetivos</Link>
               <Link href="/escalon">Escalon</Link>
               <Link href="/categoria">Categorias</Link>

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Head from 'next/head'
 const Diver = styled.div`
 
   margin:30px;
@@ -13,6 +14,10 @@ const Diver = styled.div`
 `
 export function Entrada () {
   return (
+  <>
+        <Head>
+            <link rel="stylesheet" href="..." />
+        </Head>
         <Diver>
             <h2>La escalera mágica</h2>
             <p>La escalera mágica es una aplicación basada en objetivos de todo tipo.</p>
@@ -25,6 +30,7 @@ export function Entrada () {
             <p>Logueate para poder acceder</p>
 
         </Diver>
+  </>
   )
 }
 

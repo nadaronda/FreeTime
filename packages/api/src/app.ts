@@ -1,6 +1,7 @@
 import { FastifyPluginAsync } from 'fastify'
 import fastifyCors from 'fastify-cors'
 import fastifyBlipp from 'fastify-blipp'
+import formBodyPlugin from 'fastify-formbody'
 import { conectDB } from './lib/db'
 import { categoriaRouter } from './routers/categoriaRouter'
 import { objetivoGeneralRouter } from './routers/objetivoGeneralRouter'
@@ -19,7 +20,7 @@ export const mainApp: FastifyPluginAsync = async (app) => {
       cb(null, false)
     }
   })
-
+  app.register(formBodyPlugin)
   app.register(objetivoGeneralRouter, { prefix: '/objetivo' })
   app.register(escalonGeneralRouter, { prefix: '/escalon' })
   app.register(categoriaRouter, { prefix: '/categoria' })

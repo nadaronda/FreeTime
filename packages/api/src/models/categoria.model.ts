@@ -15,3 +15,5 @@ export const getEscalon = async (idCategoria: string) => {
   return escalones
 }
 export const Categoria = mongoose.model<icategoria>('categoria', schema)
+
+// modelos son para que los datos que se guarden en la bbdd sigan esta plantilla

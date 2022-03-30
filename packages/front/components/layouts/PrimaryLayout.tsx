@@ -4,6 +4,7 @@ import Menu from '../menu'
 import Footer from '../footer'
 import { useUser } from '@auth0/nextjs-auth0'
 import { Entrada } from '../entrada'
+import styled from 'styled-components'
 import loginHandlerFactory from '@auth0/nextjs-auth0/dist/auth0-session/handlers/login'
 // cuando realice el login auth0 importar aqui y todo lo que conlleva la modificacion del archivo.
 
@@ -18,6 +19,7 @@ const PrimaryLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       <div>
         <Head>
           <title>Escalera mágica</title>
+
           <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -36,6 +38,7 @@ const PrimaryLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
             crossOrigin="anonymous"
           ></script>
+          <link rel="stylesheet" href="..." />
         </Head>
       </div>
       <div className="container">
@@ -66,14 +69,19 @@ const PrimaryLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                 {user.email}
 
               </a>
-              <Menu />
-              {children}
+
             </>
             )}
           </div>
 
         </main>
         {!user && (<Entrada/>)}
+        {user && (
+          <>
+           <Menu />
+           {children}
+           </>
+        )}
         <Footer />
       </div>
     </>

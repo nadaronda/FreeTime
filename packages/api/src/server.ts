@@ -9,4 +9,4 @@ const server = fastify({
 })
 
 server.register(mainApp)
-server.listen(PORT)// de aquí retito , "0.0.0,0"
+server.listen(PORT)

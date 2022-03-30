@@ -1,6 +1,8 @@
 import React from 'react'
+import AllObjective from '../components/objetivo'
 
 const ObjetivoPage = () => (
+  <>
   <div>
 
     <h2>La escalera mágica</h2>
@@ -10,9 +12,10 @@ const ObjetivoPage = () => (
     </p>
 
     <div>
-
+    <AllObjective></AllObjective>
     </div>
   </div>
+  </>
 )
 
 export default ObjetivoPage
