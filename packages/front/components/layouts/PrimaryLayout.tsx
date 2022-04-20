@@ -1,11 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
-import Menu from '../menu'
-import Footer from '../footer'
 import { useUser } from '@auth0/nextjs-auth0'
-import { Entrada } from '../entrada'
 import styled from 'styled-components'
-import loginHandlerFactory from '@auth0/nextjs-auth0/dist/auth0-session/handlers/login'
+import Menu from '../menu'
+import Entrada from '../entrada'
+
 // cuando realice el login auth0 importar aqui y todo lo que conlleva la modificacion del archivo.
 
 // recibe props children (palabra reservada) exclusivamente que es un componente de react, FC signica function component.
@@ -43,10 +42,11 @@ const PrimaryLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       </div>
       <div className="container">
 
-        <main>
+      <main>
 
         <div style={{ padding: '20px 0', textAlign: 'center' }}>
             {!user && (
+            <>
             <a
               style={{ margin: '5px' }}
               href="/api/auth/login"
@@ -54,7 +54,8 @@ const PrimaryLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             >
               Login
             </a>
-
+            <Entrada/>
+            </>
             )}
             {user && (
             <>
@@ -66,23 +67,18 @@ const PrimaryLayout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
               >
                 Logout
                 {' '}
-                {user.email}
+                {user.name}
 
               </a>
-
+              <Menu/>
+              {children}
             </>
+
             )}
           </div>
 
         </main>
-        {!user && (<Entrada/>)}
-        {user && (
-          <>
-           <Menu />
-           {children}
-           </>
-        )}
-        <Footer />
+
       </div>
     </>
   )

@@ -1,17 +1,25 @@
 import React from 'react'
 
-const IndexPage = () => (
-  <div>
-    <h2>La escalera mágica</h2>
-    <p>La escalera mágica es una aplicación basada en objetivos de todo tipo.</p>
-    <p>
-      Consiste en tener objetivos que se subdividen en micro objetivos, sencillos de alcanzar
-      que se denominan escalones, estos escalones a su vez tienen una caracteristica que se llama
-      categoria, estas categorias pueden ser de todo tipo, economicas, burocraticas, familiares, etc...
-      A aparte de tener una fecha límite que le propio ususrio se pone como meta alcanzar.
-    </p>
+import Entradados from '../components/entradados'
+import Footer from '../components/footer'
+const styleObject = {
+  border: '3px solid blue',
+  padding: 10,
+  marginTop: 10,
+  background: '#EAFAF1',
 
-  </div>
+  letterspacing: 30
+
+}
+const IndexPage = () => (
+  <>
+  <div style={ styleObject}>
+
+            <Entradados/>
+
+        </div>
+        <Footer/>
+  </>
 )
 
 export default IndexPage

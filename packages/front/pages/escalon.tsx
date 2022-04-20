@@ -12,6 +12,7 @@ const CreaEscalon = () => (
     el micro objetivo, escalón debe ser lo más simple posible.
     </p>
     <NewEscalon/>
+    <a className="nav-link active" aria-current="page" type="button" href="/escalon"> Ver escalones creados </a>
   {/* Aqui intentar que aparezcan los escalones de interes */}
   </div>
 )

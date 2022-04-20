@@ -18,7 +18,6 @@
 
 
 ## 1. Título de la aplicación:
-Free Time & 
 The magic staircase
 
 ## 2. Imágenes y vídeos:
@@ -26,8 +25,7 @@ The magic staircase
 ![Escalera mágica](./img/escalera.jpg)
 
 ## 3. Motivación del proyecto:
-La Idea de Free Time lleva bastante tiempo rondandome la cabeza, se trata de una aplicación que te da ideas de que poder realizar en tu tiempo libre, busco algo sencillo, en el que el usuario de un toque propio de sus gustos, sus hobbies y lo que le gusta. Me gustaria poder meter también actividades orientadas a tematicas como por ejemplo: navidad, 4 estaciones, San Valentín, festivos etc... y 
-Finalmente añadir la escalera magica, donde poder añadir una escalera en la que el usuario debera añadir pequeños objetivos para alcanzar el objetivo mayor, como por ejemplo: irse de viaje, plantearse que es lo que necesita para ello, y añadirlo en la escalerita, y cuando valla cumpliendo los pequeños objetivos subir un escalon, ejemplo si necesito un pasporte, todos sabemos que no se consigue de un día para otro, por lo que necesitaria añadirlo a un escalon y una vez lo consiga tendría que ver que objetivo se plantea para el siguiente escalo, y asi hasta llegar al objetivo final.
+La escalera magica, es una idea que lleva bastante tiempo rondandome la cabeza. Se trata de una aplicación, donde poder añadir una escalera en la que el usuario debera añadir pequeños objetivos para alcanzar el objetivo mayor, como por ejemplo: irse de viaje, plantearse que es lo que necesita para ello, y añadirlo en la escalerita, y cuando valla cumpliendo los pequeños objetivos subir un escalon, ejemplo si necesito un pasporte, todos sabemos que no se consigue de un día para otro, por lo que necesitaria añadirlo a un escalon y una vez lo consiga tendría que ver que objetivo se plantea para el siguiente escalo, y asi hasta llegar al objetivo final.
 
 ## 4. Estructura:
  ### 4.1.  Repositorio:
@@ -129,5 +127,5 @@ Execute the project:
 
 ## 10. Agradecimientos y otras consideraciones:
 Agradecer principalmente a mi pareja por aguantarme las horas y horas que le he dedicado al proyecto, la ayuda recibida de su parte en diversos ambitos, sin el no hubiese podido con todo, muchísimas gracias.
-También agradecer a Core code School por todo, a mi profesor Marcos.
+También agradecer a Core Code School por todo, a mi profesor Marcos.
 Y a todos mis compañeros por ayudarme siempre que han podido.

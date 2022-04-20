@@ -9,18 +9,22 @@ const FlexForm = styled.form`
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
+  border: 1px solid black;
 `
 
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  background:  #CED3D4 ;
 `
 
 const Column = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
+  
+ 
 `
 
 const CustomLabel = styled.span`

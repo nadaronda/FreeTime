@@ -12,7 +12,7 @@ const Diver = styled.div`
     background-color: #bdbbbb;
   }
 `
-export function Entrada () {
+export function Entradados () {
   return (
   <>
         <Head>
@@ -27,11 +27,11 @@ export function Entrada () {
                 categoría, estas categorías pueden ser de todo tipo, economicas, burocráticas, familiares, etc...
                 A aparte, de tener una fecha límite que se establecera el propio usuario como meta alcanzar.
             </p>
-            <p>Logueate para poder acceder al menu y poder navegar por la pagina web</p>
+            <p>Una vez logueado puedes crear objetivos, escalones y categorias.</p>
 
         </Diver>
   </>
   )
 }
 
-export default Entrada
+export default Entradados

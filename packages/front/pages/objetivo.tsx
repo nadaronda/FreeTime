@@ -1,4 +1,5 @@
 import React from 'react'
+
 import AllObjective from '../components/objetivo'
 
 const ObjetivoPage = () => (
@@ -14,6 +15,7 @@ const ObjetivoPage = () => (
     <div>
     <AllObjective></AllObjective>
     </div>
+
   </div>
   </>
 )
